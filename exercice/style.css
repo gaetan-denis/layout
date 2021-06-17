@@ -1,0 +1,42 @@
+body {
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.header {
+    flex-basis: 100%; 
+}
+
+..sidebar {
+    flex-basis: 25%; 
+}
+
+.content {
+    flex-basis: 50%; 
+}
+
+.footer {
+    flex-basis: 100%; 
+}
+
+@media screen and (max-width:750px) {
+    .content {
+        flex-basis:100%;
+    }
+    .sidebar {
+        flex-basis:50%;
+        order:1;
+    }
+    .footer{
+        order:2;
+    }
+}
+
+@media screen and (max-width:500px) {
+   
+    .sidebar {
+        flex-basis:100%;
+        order:1;
+    
+    }
+}
